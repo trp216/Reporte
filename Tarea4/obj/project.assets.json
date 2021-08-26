@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR I\\ProyectosVS\\Tarea4\\Tarea4.csproj",
+      "projectUniqueName": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR_I\\ProyectosVS\\TallerS3Parte4\\Tarea4\\Tarea4.csproj",
       "projectName": "Tarea4",
-      "projectPath": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR I\\ProyectosVS\\Tarea4\\Tarea4.csproj",
+      "projectPath": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR_I\\ProyectosVS\\TallerS3Parte4\\Tarea4\\Tarea4.csproj",
       "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR I\\ProyectosVS\\Tarea4\\obj\\",
+      "outputPath": "C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR_I\\ProyectosVS\\TallerS3Parte4\\Tarea4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
