@@ -21,78 +21,11 @@ namespace Tarea4
     /// </summary>
     /// 
 
-    public class Register
-    {
-        private string codigodep, codigomun, departamento, municipio, tipo;
-
-        public Register(string codigodep, string codigomun, string departamento, string municipio, string tipo)
-        {
-            this.codigodep = codigodep;
-            this.codigomun = codigomun;
-            this.departamento = departamento;
-            this.municipio = municipio;
-            this.tipo = tipo;
-        }
-
-        public String Codigodep
-        {
-            get
-            {
-                return codigodep;
-            }
-            set
-            {
-                codigodep = value;
-            }
-        }
-
-
-        public String Codigomun
-        {
-            get
-            {
-                return codigomun;
-            }
-            set
-            {
-                codigomun = value;
-            }
-        }
-
-        public String Municipio
-        {
-            get
-            {
-                return municipio;
-            }
-            set
-            {
-                municipio = value;
-            }
-        }
-
-        public String Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-            set
-            {
-                tipo = value;
-            }
-        }
-
-        public String toString()
-        {
-            return codigodep + " " + codigomun + " " + departamento + " " + municipio + " " + tipo;
-        }
-
-    }
+   
 
     public partial class MainWindow : Window
     {
-        public List<Register> registers = new List<Register>();
+        private List<Registro> registers = new List<Registro>();
 
         public MainWindow()
         {
@@ -111,7 +44,7 @@ namespace Tarea4
                 while (line != null)
                 {
                     var values = line.Split(',');
-                    Register r = new Register(values[0], values[1], values[2], values[3], values[4]);
+                    Registro r = new Registro(values[0], values[1], values[2], values[3], values[4]);
                     registers.Add(r);
                     //lstNames.Content += r.toString() + "\n";
                     //write the lie to console window
