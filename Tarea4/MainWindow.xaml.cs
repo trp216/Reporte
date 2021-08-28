@@ -47,5 +47,10 @@ namespace Tarea4
                 i++;
             }
         }
+
+        public void showFilteredRegisters()
+        {
+
+        }
     }
 }

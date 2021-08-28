@@ -68,6 +68,18 @@ namespace Tarea4
             }
         }
 
+        public String Departamento
+        {
+            get
+            {
+                return departamento;
+            }
+            set
+            {
+                departamento = value;
+            }
+        }
+
         public String toString()
         {
             return codigodep + " " + codigomun + " " + departamento + " " + municipio + " " + tipo;
