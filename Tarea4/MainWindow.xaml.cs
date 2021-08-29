@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Microsoft.Win32;
 
 namespace Tarea4
 {
@@ -31,13 +32,9 @@ namespace Tarea4
         public MainWindow()
         {
             InitializeComponent();
-
-            principal = new Principal();
-
-            showRegisters();
         }
 
-        public void showRegisters()
+        public void mostrarRegistros()
         {
             int i = 1;
             ;
@@ -46,6 +43,26 @@ namespace Tarea4
                 lstNames.Content += principal.getAllRegistros().ElementAt(i).toString() + "\n";
                 i++;
             }
+        }
+
+        public void cargarArchivo(object sender, RoutedEventArgs e)
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog()==true)
+            {
+                String url = openFileDialog.FileName;
+                direccionURL.Text = url;
+                principal = new Principal(url);
+            }
+            else
+            {
+                principal = new Principal();
+            }
+
+            mostrarRegistros();
+
         }
     }
 }

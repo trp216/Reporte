@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tarea4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="545" Width="970">
     <Grid>
-        <Label x:Name="lstNames"></Label>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50px"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lstNames" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"/>
+
+        <Button Content="Seleccionar" Click="cargarArchivo" Margin="20,10,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="direccionURL" HorizontalAlignment="Right" Margin="0,10,20,0" Text="URL" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="24" IsEnabled="False" Grid.Column="0" Grid.Row="1"/>
+
+
     </Grid>
 </Window>

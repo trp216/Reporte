@@ -9,8 +9,16 @@ namespace Tarea4
 {
     class Principal
     {
+        public readonly String URL = "..\\Codigos_municipios.csv";
+
         private List<Registro> registros = new List<Registro>();
         public Principal() {
+            cargarArchivo();
+        }
+
+        public Principal(String url)
+        {
+            URL = url;
             cargarArchivo();
         }
 
@@ -20,7 +28,7 @@ namespace Tarea4
             try
             {
                 //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader("C:\\Users\\aleja\\Desktop\\ICESI\\SEMESTRE_7\\PROYECTO_INTEGRADOR_I\\ProyectosVS\\Test\\Codigos_municipios.csv");
+                StreamReader sr = new StreamReader(URL);
                 //Read the first line of text
 
                 line = sr.ReadLine();
