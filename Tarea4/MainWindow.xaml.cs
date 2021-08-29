@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace Tarea4
 {
@@ -33,25 +34,17 @@ namespace Tarea4
         public MainWindow()
         {
             InitializeComponent();
+            cmbFilter.IsEnabled = false;
+            btnDeshacerFiltro.IsEnabled = false;
         }
 
-        public void mostrarRegistros()
-        {
-            int i = 1;
-            ;
-            while (i<principal.getAllRegistros().Count())
-            {
-                lstNames.Content += principal.getAllRegistros().ElementAt(i).toString() + "\n";
-                i++;
-            }
-        }
 
         public void cargarArchivo(object sender, RoutedEventArgs e)
         {
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            if (openFileDialog.ShowDialog()==true)
+            if (openFileDialog.ShowDialog() == true)
             {
                 String url = openFileDialog.FileName;
                 direccionURL.Text = url;
@@ -62,11 +55,32 @@ namespace Tarea4
                 principal = new Principal();
             }
 
-            mostrarRegistros();
             actualizarTabla();
+
+            cmbFilter.IsEnabled = true;
+            
         }
 
         public void actualizarTabla()
+        {
+            dataTable.ItemsSource = principal.getAllRegistros();
+        }
+
+        public void cmbFilter_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            ComboBoxItem ci = (ComboBoxItem)cmbFilter.SelectedItem;
+
+            String sel = ci.Content.ToString();
+
+            if (sel!=null && dataTable!=null)
+            {
+                Trace.WriteLine(sel);
+                dataTable.ItemsSource = principal.filtrarPorDepartamento(sel);
+            }
+            btnDeshacerFiltro.IsEnabled = true;
+        }
+
+        public void deshacerFiltro(object sender, RoutedEventArgs e)
         {
             dataTable.ItemsSource = principal.getAllRegistros();
         }

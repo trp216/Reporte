@@ -18,7 +18,39 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="lstNames" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"/>
+        <ComboBox Name="cmbFilter" SelectionChanged="cmbFilter_SelectionChanged" Grid.Column="1" Grid.Row="0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0">
+
+            <ComboBoxItem>A</ComboBoxItem>
+            <ComboBoxItem>B</ComboBoxItem>
+            <ComboBoxItem>C</ComboBoxItem>
+            <ComboBoxItem>D</ComboBoxItem>
+            <ComboBoxItem>E</ComboBoxItem>
+            <ComboBoxItem>F</ComboBoxItem>
+            <ComboBoxItem>G</ComboBoxItem>
+            <ComboBoxItem>H</ComboBoxItem>
+            <ComboBoxItem>I</ComboBoxItem>
+            <ComboBoxItem>J</ComboBoxItem>
+            <ComboBoxItem>K</ComboBoxItem>
+            <ComboBoxItem>L</ComboBoxItem>
+            <ComboBoxItem>M</ComboBoxItem>
+            <ComboBoxItem>N</ComboBoxItem>
+            <ComboBoxItem>O</ComboBoxItem>
+            <ComboBoxItem>P</ComboBoxItem>
+            <ComboBoxItem>Q</ComboBoxItem>
+            <ComboBoxItem>R</ComboBoxItem>
+            <ComboBoxItem>S</ComboBoxItem>
+            <ComboBoxItem>T</ComboBoxItem>
+            <ComboBoxItem>U</ComboBoxItem>
+            <ComboBoxItem>V</ComboBoxItem>
+            <ComboBoxItem>W</ComboBoxItem>
+            <ComboBoxItem>X</ComboBoxItem>
+            <ComboBoxItem>Y</ComboBoxItem>
+            <ComboBoxItem>Z</ComboBoxItem>
+
+        </ComboBox>
+        <Button Name="btnDeshacerFiltro"  Content="Deshacer" Click="deshacerFiltro" Margin="10,50,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Grid.Column="1" Grid.Row="0"/>
+
+
 
         <Button Content="Seleccionar" Click="cargarArchivo" Margin="20,10,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Grid.Column="1" Grid.Row="1"/>
         <TextBox x:Name="direccionURL" Text="URL" TextWrapping="Wrap" IsEnabled="False" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,13,10,13" Width="Auto" Height="Auto" VerticalAlignment="Center" Padding="0,0,0,0"/>
