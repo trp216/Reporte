@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tarea4"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="545" Width="970" MinWidth="885" MinHeight="360">
     <Grid>
@@ -68,6 +69,8 @@
                 <DataGridTextColumn Header="Tipo" Binding="{Binding Path=Tipo}" MinWidth="50" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <lvc:PieChart x:Name="pieChart" LegendLocation="Bottom" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Height="Auto" Margin="5,45,5,0" VerticalAlignment="Stretch" Width="Auto"/>
 
     </Grid>
 </Window>

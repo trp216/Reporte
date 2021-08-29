@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using LiveCharts.Wpf;
+using LiveCharts;
 
 namespace Tarea4
 {
@@ -55,6 +57,7 @@ namespace Tarea4
             }
 
             actualizarTabla();
+            actualizarGrafico();
 
             cmbFilter.IsEnabled = true;
             
@@ -84,6 +87,18 @@ namespace Tarea4
             cmbFilter.SelectedIndex = -1;
             cmbFilter.Text = "Seleccione una letra para filtrar...";
             btnDeshacerFiltro.IsEnabled = false;
+        }
+
+        public void actualizarGrafico()
+        {
+            int[] municipiosPorTipo = principal.getMunicipiosPorTipo();
+
+            pieChart.Series.Clear();
+
+            pieChart.Series.Add(new PieSeries { Title = "Municipio", Fill = Brushes.LightBlue, StrokeThickness = 0, Values = new ChartValues<int> { municipiosPorTipo[0] } });
+            pieChart.Series.Add(new PieSeries { Title = "Area no municipalizada", Fill = Brushes.Aqua, StrokeThickness = 0, Values = new ChartValues<int> { municipiosPorTipo[1] } });
+            pieChart.Series.Add(new PieSeries { Title = "(Sin valor)", Fill = Brushes.Aquamarine, StrokeThickness = 0, Values = new ChartValues<int> { municipiosPorTipo[2] } });
+            pieChart.Series.Add(new PieSeries { Title = "Isla", Fill = Brushes.CadetBlue, StrokeThickness = 0, Values = new ChartValues<int> { municipiosPorTipo[3] } });
         }
     }
 }

@@ -87,5 +87,30 @@ namespace Tarea4
 
             return listaFiltrada;
         }
+
+        public int[] getMunicipiosPorTipo()
+        {
+            //Se crea un arreglo para almacenar el numero de municipios por cada tipo. [0] Municipio, [1] Area no municipalizada, [2] (Sin valor), [3] Isla
+            int[] municipiosPorTipo = new int[4];
+
+            foreach (Registro item in registros)
+            {
+                if (item.Tipo.Equals("Municipio"))
+                {
+                    municipiosPorTipo[0]++;
+                }
+                else if (item.Tipo.Equals("Área no municipalizada"))
+                {
+                    municipiosPorTipo[1]++;
+                }
+                else if (item.Tipo.Equals("Isla"))
+                {
+                    municipiosPorTipo[3]++;
+                }
+                else municipiosPorTipo[2]++;
+            }
+
+            return municipiosPorTipo;
+        }
     }
 }

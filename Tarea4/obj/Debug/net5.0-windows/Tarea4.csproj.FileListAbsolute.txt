@@ -42,3 +42,6 @@ C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\obj\Debug\net5.0-windows
 C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\obj\Debug\net5.0-windows\ref\Tarea4.dll
 C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\obj\Debug\net5.0-windows\Tarea4.pdb
 C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\obj\Debug\net5.0-windows\Tarea4.genruntimeconfig.cache
+C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\bin\Debug\net5.0-windows\LiveCharts.dll
+C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
+C:\Users\dahp-\OneDrive\Documents\GitHub\Reporte\Tarea4\obj\Debug\net5.0-windows\Tarea4.csproj.CopyComplete
