@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tarea4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="545" Width="970">
+        Title="MainWindow" Height="545" Width="970" MinWidth="885" MinHeight="360">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -18,9 +18,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox Name="cmbFilter" SelectionChanged="cmbFilter_SelectionChanged" IsEditable="True" IsReadOnly="True"
-        Text="Seleccione una letra para filtrar..." Grid.Column="1" Grid.Row="0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0">
-        
+        <ComboBox Name="cmbFilter" SelectionChanged="cmbFilter_SelectionChanged"
+        Text="Seleccione una letra para filtrar..." Grid.Column="1" Grid.Row="0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Width="233" IsReadOnly="True" Focusable="False" IsEditable="True">
+
             <ComboBoxItem>A</ComboBoxItem>
             <ComboBoxItem>B</ComboBoxItem>
             <ComboBoxItem>C</ComboBoxItem>
@@ -49,7 +49,7 @@
             <ComboBoxItem>Z</ComboBoxItem>
 
         </ComboBox>
-        <Button Name="btnDeshacerFiltro"  Content="Deshacer" Click="deshacerFiltro" Margin="10,50,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Grid.Column="1" Grid.Row="0"/>
+        <Button Name="btnDeshacerFiltro"  Content="Deshacer" Click="deshacerFiltro" Margin="303,10,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Grid.Column="1" Grid.Row="0"/>
 
 
 
@@ -57,7 +57,7 @@
         <TextBox x:Name="direccionURL" Text="URL" TextWrapping="Wrap" IsEnabled="False" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,13,10,13" Width="Auto" Height="Auto" VerticalAlignment="Center" Padding="0,0,0,0"/>
 
         <DataGrid AutoGenerateColumns="False" 
-         x:Name="dataTable" SelectionMode="Single" Margin="5,5,5,0"
+         x:Name="dataTable" SelectionMode="Single" Margin="5,5,5,0" IsReadOnly="True"
          
         >
             <DataGrid.Columns >

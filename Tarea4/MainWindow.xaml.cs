@@ -69,10 +69,10 @@ namespace Tarea4
         {
             ComboBoxItem ci = (ComboBoxItem)cmbFilter.SelectedItem;
 
-            String sel = ci.Content.ToString();
-
-            if (sel!=null && dataTable!=null)
+            if (ci != null && dataTable != null)
             {
+                String sel = ci.Content.ToString();
+            
                 dataTable.ItemsSource = principal.filtrarPorDepartamento(sel);
             }
             btnDeshacerFiltro.IsEnabled = true;
@@ -81,6 +81,9 @@ namespace Tarea4
         public void deshacerFiltro(object sender, RoutedEventArgs e)
         {
             dataTable.ItemsSource = principal.getAllRegistros();
+            cmbFilter.SelectedIndex = -1;
+            cmbFilter.Text = "Seleccione una letra para filtrar...";
+            btnDeshacerFiltro.IsEnabled = false;
         }
     }
 }

@@ -30,10 +30,10 @@ namespace Tarea4
                 //Pass the file path and file name to the StreamReader constructor
                 StreamReader sr = new StreamReader(URL);
                 //Read the first line of text
-
-                line = sr.ReadLine();
+                sr.ReadLine();
 
                 //Continue to read until you reach end of file
+                line = sr.ReadLine();
                 while (line != null)
                 {
                     string[] values = line.Split(',');
