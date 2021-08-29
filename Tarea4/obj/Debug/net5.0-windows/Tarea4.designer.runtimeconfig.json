@@ -6,7 +6,7 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\dahp-\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\aleja\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\dahp-\\.nuget\\packages"
     ],
     "configProperties": {
