@@ -60,5 +60,20 @@ namespace Tarea4
         public List<Registro> getAllRegistros(){
             return registros;
         }
+
+        public List<Registro> filtrarPorDepartamento(char letra)
+        {
+            List<Registro> listaFiltrada = null;
+
+            for(int i = 0; i < registros.Count(); i++)
+            {
+                if (registros.ElementAt(i).Departamento.StartsWith(letra))
+                {
+                    listaFiltrada.Add(registros.ElementAt(i));
+                }
+            }
+
+            return listaFiltrada;
+        }
     }
 }
