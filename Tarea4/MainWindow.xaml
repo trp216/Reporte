@@ -18,8 +18,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox Name="cmbFilter" SelectionChanged="cmbFilter_SelectionChanged" Grid.Column="1" Grid.Row="0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0">
-
+        <ComboBox Name="cmbFilter" SelectionChanged="cmbFilter_SelectionChanged" IsEditable="True" IsReadOnly="True"
+        Text="Seleccione una letra para filtrar..." Grid.Column="1" Grid.Row="0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0">
+        
             <ComboBoxItem>A</ComboBoxItem>
             <ComboBoxItem>B</ComboBoxItem>
             <ComboBoxItem>C</ComboBoxItem>

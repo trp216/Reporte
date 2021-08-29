@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace Tarea4
 {
@@ -38,8 +37,13 @@ namespace Tarea4
                 while (line != null)
                 {
                     string[] values = line.Split(',');
-                    Registro r = new Registro(values[0], values[1], values[2], values[3], values[4]);
-                    registros.Add(r);
+                    
+                    if (!String.IsNullOrEmpty(values[1]))
+                    {
+                        Registro r = new Registro(values[0], values[1], values[2], values[3], values[4]);
+                        registros.Add(r);
+                    }
+                    
                     //Read the next line
                     line = sr.ReadLine();
                 }
@@ -65,24 +69,19 @@ namespace Tarea4
         public List<Registro> filtrarPorDepartamento(String letra)
         {
 
-           // Trace.WriteLine("Confirmo que me llego una: " + letra);
 
             char l = char.Parse(letra);
            
             List<Registro> listaFiltrada = new List<Registro>();
 
-            Trace.WriteLine("registros.Count = " + registros.Count);
             for(int i = 0; i < registros.Count; i++)
             {
-               // Trace.WriteLine("i = " + i);
 
                 char c = registros.ElementAt(i).Departamento[0];
-               // Trace.WriteLine("Primera letra del actual dpto: " + c);
 
                 if (l.Equals(c))
                 {
                     listaFiltrada.Add(registros.ElementAt(i));
-                   // Trace.WriteLine(registros.ElementAt(i).Departamento);
                 }
             }
 

@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace Tarea4
 {
@@ -74,7 +73,6 @@ namespace Tarea4
 
             if (sel!=null && dataTable!=null)
             {
-                Trace.WriteLine(sel);
                 dataTable.ItemsSource = principal.filtrarPorDepartamento(sel);
             }
             btnDeshacerFiltro.IsEnabled = true;
