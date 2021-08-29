@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Collections.ObjectModel;
 
 namespace Tarea4
 {
@@ -62,7 +63,12 @@ namespace Tarea4
             }
 
             mostrarRegistros();
+            actualizarTabla();
+        }
 
+        public void actualizarTabla()
+        {
+            dataTable.ItemsSource = principal.getAllRegistros();
         }
     }
 }
