@@ -9,7 +9,7 @@ namespace Tarea4
 {
     class Principal
     {
-        public readonly String URL = "..\\Codigos_municipios.csv";
+        public readonly String URL = "..\\..\\..\\data\\Codigos_municipios.csv";
 
         private List<Registro> registros = new List<Registro>();
         public Principal() {
